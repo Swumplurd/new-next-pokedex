@@ -15,7 +15,12 @@ export const FavoriteCardPokemon: FC<Props> = ({ pokemonId }) => {
     <Grid xs={6} sm={3} md={2} xl={2} key={pokemonId} onClick={onFavoritePokemon}>
       <Card isHoverable isPressable css={{ padding: 10 }}>
         <Card.Image
+          showSkeleton
+          maxDelay={5000}
+          width={320}
+          height={180}
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonId}.svg`}
+          alt="Imagen no disponible"
         />
       </Card>
     </Grid>
